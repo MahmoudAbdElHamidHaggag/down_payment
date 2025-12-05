@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-28 16:16:54.705797",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "down_payment_item",
+  "item_name",
+  "uom",
+  "tax_template",
+  "company",
+  "cost_center",
+  "income_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "down_payment_item",
+   "fieldtype": "Link",
+   "label": "Down Payment Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "tax_template",
+   "fieldtype": "Link",
+   "label": "Tax Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "income_account",
+   "fieldtype": "Link",
+   "label": "Income Account",
+   "options": "Account"
+  },
+  {
+   "fetch_from": "down_payment_item.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fetch_from": "down_payment_item.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "label": "Item Name"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-12-04 11:12:37.153959",
+ "modified_by": "Administrator",
+ "module": "Down Payment",
+ "name": "Down Payment Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
