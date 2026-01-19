@@ -129,9 +129,10 @@ doctype_js = {"Sales Invoice" : "public/js/add_down_invoice.js", "Sales Order" :
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
+override_doctype_class = {
 # 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+"Sales Invoice": "down_payment.overrides.sales_invoice.custom_sales_invoice.CustomSalesInvoice"
+}
 
 # Document Events
 # ---------------
@@ -177,7 +178,9 @@ doc_events = {
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "down_payment.event.get_events"
+# 	# "frappe.desk.doctype.event.event.get_events": "down_payment.event.get_events"
+#     "erpnext.controllers.taxes_and_totals.TaxesAndTotals.calculate_net_total":
+#         "down_payment.overrides.calculate_net_total"
 # }
 #
 # each overriding function accepts a `data` argument;

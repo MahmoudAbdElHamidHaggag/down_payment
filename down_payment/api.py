@@ -301,3 +301,9 @@ def create_sales_invoice_on_payment(docname, amount):
 
     return si.name
 
+
+
+####################################################################################################################
+
+import erpnext
+from erpnext.controllers.taxes_and_totals import calculate_taxes_and_totals

@@ -5,64 +5,84 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "company",
+  "income_account",
+  "tax_template",
+  "column_break_auav",
   "down_payment_item",
   "item_name",
   "uom",
-  "tax_template",
-  "company",
-  "cost_center",
-  "income_account"
+  "cost_center"
  ],
  "fields": [
   {
+   "description": "Must be Service item",
    "fieldname": "down_payment_item",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Down Payment Item",
-   "options": "Item"
+   "options": "Item",
+   "reqd": 1
   },
   {
+   "description": "Must be total include tax",
    "fieldname": "tax_template",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Tax Template",
-   "options": "Sales Taxes and Charges Template"
+   "options": "Sales Taxes and Charges Template",
+   "reqd": 1
   },
   {
    "fieldname": "company",
    "fieldtype": "Link",
    "label": "Company",
-   "options": "Company"
+   "options": "Company",
+   "reqd": 1
   },
   {
+   "description": "Is not choose the any cost center will be take the default cost center in company settings",
    "fieldname": "cost_center",
    "fieldtype": "Link",
    "label": "Cost Center",
    "options": "Cost Center"
   },
   {
+   "description": "Account For Advance Income",
    "fieldname": "income_account",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Income Account",
-   "options": "Account"
+   "options": "Account",
+   "reqd": 1
   },
   {
+   "description": "Automatically Fetch ",
    "fetch_from": "down_payment_item.stock_uom",
    "fieldname": "uom",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "UOM",
    "options": "UOM"
   },
   {
+   "description": "Automatically Fetch ",
    "fetch_from": "down_payment_item.item_name",
    "fieldname": "item_name",
    "fieldtype": "Data",
+   "hidden": 1,
    "label": "Item Name"
+  },
+  {
+   "fieldname": "column_break_auav",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2025-12-04 11:12:37.153959",
+ "modified": "2026-01-18 16:24:18.793922",
  "modified_by": "Administrator",
  "module": "Down Payment",
  "name": "Down Payment Setting",
