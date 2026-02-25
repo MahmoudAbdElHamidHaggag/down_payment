@@ -28,7 +28,7 @@ frappe.ui.form.on("Sales Invoice", {
                     ["custom_is_down_payment",'=',1],
                     ['company','=',com],
                     ['docstatus','=',1],
-                    ['custom_down_payment_link_sales_order', 'in', ['', null]],
+                    // ['custom_down_payment_link_sales_order', 'in', ['', null]],
                 ]
             };
         });
